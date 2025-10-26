@@ -1,0 +1,90 @@
+@import "../colors/rofi_theme.rasi"
+
+* {
+    text-color:       @main-fg;
+    font:             "JetBrains Mono Nerd 16";
+}
+
+window {
+    width:    44%;
+    height:   77%;
+    border:   3px;
+    border-radius: 1%;
+    background-color: @main-bg;
+    border-color: @main-br;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ entry , listview ];
+    spacing:  10px;
+    orientation: vertical;
+}
+
+entry {
+  padding: 0.4em 1em;
+  margin: 3% 1% 1% 1%;
+  background-color: @select-fg;
+  border: 2px;
+  border-radius: 1%;
+  border-color: @main-br;
+  text-color: @main-fg;
+  placeholder-color: @main-fg;
+  horizontal-align: 0.0;
+  expand: false;
+}
+
+
+listview {
+    enabled: true;
+    columns:  1;
+    lines:    10;
+    cycle:    false;
+    spacing:  1.5%;
+    layout:   vertical;
+    background-color: transparent;
+    margin: 0 2% 2% 2%;
+    border-radius: 1%;
+}
+
+
+// Elements //
+element {
+    enabled: true;
+    spacing: 1%;
+    padding: 1% 1% 1% 3%;
+    background-color: transparent;
+    border-radius: 1%;
+    text-color: @main-fg;
+}
+
+element-icon {
+    enabled: false;
+}
+
+element selected {
+    background-color: @select-bg;
+    text-color: @select-fg;
+}
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    cursor: inherit;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+// Error message //
+error-message {
+    text-color: @main-fg;
+    background-color: @main-bg;
+    text-transform: capitalize;
+    children: [ "textbox" ];
+}
+textbox {
+    text-color: inherit;
+    background-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
